@@ -1,0 +1,30 @@
+#planets {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.planets-item {
+  width: 120px;
+  height: 120px;
+  font-family: @tech-font;
+  color: @rebel-red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.planet-globe {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-size: 157%;
+  background-position: center;
+  cursor: pointer;
+
+  &.large-planet {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+  }
+}

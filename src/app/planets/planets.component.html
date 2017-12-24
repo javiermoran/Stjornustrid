@@ -1,0 +1,6 @@
+<div id="planets">
+  <div class="planets-item" *ngFor="let planet of planets" (click)="goPlanetDetails(planet.name)">
+    <div class="planet-globe" [ngStyle]="{'background-image': getPicture(planet.name)}"></div>
+    <div>{{planet.name}}</div>
+  </div>
+</div>
