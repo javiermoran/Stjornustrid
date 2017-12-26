@@ -13,6 +13,25 @@
   margin: 10px 0;
 }
 
+@-moz-keyframes slide {
+  0% { background-position: -600px -25px; }
+  100% { background-position: 0 -25px; } 
+}
+@-webkit-keyframes slide { 
+  0% { background-position: -600px -25px; }
+  100% { background-position: 0 -25px; }  
+}
+@keyframes slide {
+  0% { background-position: -600px -25px; }
+  100% { background-position: 0 -25px; } 
+}
+
+.animation(@time) {
+  -webkit-animation:slide @time linear infinite;
+  -moz-animation:slide @time linear infinite;
+  animation:slide @time linear infinite;
+}   
+
 .planet-globe {
   margin: auto;
   width: 100px;
@@ -22,9 +41,31 @@
   background-position: center;
   cursor: pointer;
 
+  &.spinning-planet {
+    .animation(40s);
+  }
+
   &.large-planet {
     width: 300px;
     height: 300px;
     border-radius: 300px;
+    background-repeat: repeat-x;
+    cursor: default;
+  }
+}
+
+.details-title {
+  text-align: center;
+  font-size: 36px;
+  height: 36px;
+}
+
+.details-table {
+  margin-top: 20px;
+  font-family: @tech-font;
+  text-transform: capitalize;
+
+  td {
+    padding: 10px;
   }
 }

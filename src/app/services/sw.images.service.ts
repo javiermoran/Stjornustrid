@@ -14,7 +14,7 @@ export class SwImagesService {
   getPlanetPicture(name) {
     let planetPictures = [
       { name: 'Alderaan', url: 'https://vignette.wikia.nocookie.net/starwars/images/4/4a/Alderaan.jpg/revision/latest?cb=20061211013805' },
-      { name: 'Yavin IV', url: 'https://vignette4.wikia.nocookie.net/starwars/images/a/a0/Eaw_Yavin4.jpg/revision/latest?cb=20060418114439' },
+      { name: 'Yavin IV', url: 'assets/yaviniv2.png' },
       { name: 'Hoth', url: 'https://vignette.wikia.nocookie.net/starwars/images/1/1d/Hoth_SWCT.png/revision/latest/scale-to-width-down/500?cb=20160630022322' },
       { name: 'Dagobah', url: 'https://vignette.wikia.nocookie.net/starwars/images/4/48/Dagobah_ep3.jpg/revision/latest/scale-to-width-down/500?cb=20100122163146' },
       { name: 'Bespin', url: 'https://vignette.wikia.nocookie.net/starwars/images/1/11/Bespin-SWCT.png/revision/latest/scale-to-width-down/500?cb=20170709211642' },

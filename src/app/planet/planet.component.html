@@ -1,11 +1,45 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
+      <h1 class="details-title">{{details.name}}</h1>
       <div class="planet-globe large-planet spinning-planet" 
            [ngStyle]="{'background-image': details.picture}"></div>
     </div>
     <div class="col-md-6">
-
+      <table class="details-table">
+        <tr>
+          <td>Rotation period:</td>
+          <td>{{details.rotation_period}}</td>
+        </tr>
+        <tr>
+          <td>Orbital period:</td>
+          <td>{{details.orbital_period}}</td>
+        </tr>
+        <tr>
+          <td>Diameter:</td>
+          <td>{{details.diameter}}</td>
+        </tr>
+        <tr>
+          <td>Climate:</td>
+          <td>{{details.climate}}</td>
+        </tr>
+        <tr>
+          <td>Gravity:</td>
+          <td>{{details.gravity}}</td>
+        </tr>
+        <tr>
+          <td>Terrain:</td>
+          <td>{{details.terrain}}</td>
+        </tr>
+        <tr>
+          <td>Surface water:</td>
+          <td>{{details.surface_water}}</td>
+        </tr>
+        <tr>
+          <td>Population:</td>
+          <td>{{details.population}}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

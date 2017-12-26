@@ -7,6 +7,7 @@ import _ from 'lodash';
 @Injectable()
 export class SwService {
   private basepath:string = "";
+  private planets = [];
 
   constructor(private http:HttpClient) { 
     this.basepath = "https://swapi.co/api";
@@ -36,7 +37,12 @@ export class SwService {
     let endpoint = this.getResource('planets');
 
     let planetsOvservable = new Observable((observer) => {
-      this.getCallRecursive(endpoint, observer);
+      if(this.planets.length > 0) {
+        observer.next(this.planets);
+        observer.complete();
+      } else {
+        this.getCallRecursive(endpoint, observer);
+      }
     });
     return planetsOvservable;
   }
@@ -45,6 +51,8 @@ export class SwService {
     this.http.get(url).subscribe(
       data => {
         observer.next(data['results']);
+        
+        _.each(data['results'], p => { this.planets.push(p) });
 
         if(data['next']) {
           this.getCallRecursive(data['next'], observer);
